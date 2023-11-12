@@ -21,7 +21,7 @@ export const addContactThunk = createAsyncThunk(
   async (contact, thunkAPI) => {
     try {
       const data = await axios.post('contacts', contact);
-      console.log(data.data);
+      
       return data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue('Contact is exist');

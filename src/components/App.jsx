@@ -20,7 +20,7 @@ const App = () => {
   const filter = useSelector(selectFilter);
   const loading = useSelector(selectLoading);
   // const error = useSelector(selectError);
-  console.log(loading);
+
 
   const dispatch = useDispatch();
 
@@ -33,7 +33,7 @@ const App = () => {
   };
 
   const handleAddContact = contact => {
-    console.log(contact);
+    
     const item = contacts.find(
       item => item.name.toLowerCase() === contact.name.toLowerCase()
     );
